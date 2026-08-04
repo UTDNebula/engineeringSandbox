@@ -12,7 +12,7 @@ body:
     attributes:
       label: Problem
       description: |
-        Whats the problem this change would solve?
+        What's the problem this change would solve?
     validations:
       required: true
   - type: textarea
