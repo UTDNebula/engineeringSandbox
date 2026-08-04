@@ -1,6 +1,6 @@
 name: Feature Request
 description: Suggest an idea for this project, e.g., a new feature, an improvement to an existing feature, or a new integration
-labels: ['Feature']
+labels: ["Feature"]
 body:
   - type: markdown
     attributes:
@@ -12,7 +12,7 @@ body:
     attributes:
       label: Problem
       description: |
-        Whats the problem this feature would solve?
+        What's the problem this feature would solve?
     validations:
       required: true
   - type: textarea
