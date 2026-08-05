@@ -5,8 +5,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! By submitting this issue, 
-        you agree to follow our [Code of Conduct](https://nebula-labs.atlassian.net/wiki/x/vAA-DQ)
+        Thanks for taking the time to fill out this bug report! By submitting 
+        this issue, you agree to follow our 
+        [Code of Conduct](https://nebula-labs.atlassian.net/wiki/x/vAA-DQ)
   - type: textarea
     id: description
     attributes:
@@ -20,8 +21,9 @@ body:
     attributes:
       label: Steps To Reproduce
       description: |
-        Describe how to reproduce this bug. You can include include screenshots or logs if they would help!
-        If putting logs, be sure to wrap with ```` ```bash ```` before your logs and ```` ``` ```` after 
+        Describe how to reproduce this bug. You can include include 
+        screenshots or logs if they would help! If putting logs, be sure to 
+        wrap with ```` ```bash ```` before your logs and ```` ``` ```` after
     validations:
       required: true
   - type: textarea
@@ -29,16 +31,28 @@ body:
     attributes:
       label: Additional Context
       description: |
-        Describe the bug in more detail. You can include related issues, helpful 
-        background knowledge, related documentation, or anything else that will help
+        Describe the bug in more detail. You can include related issues, 
+        helpful background knowledge, related documentation, or anything else 
+        that will help
     validations:
       required: false
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Where did you find this bug?
+      options:
+        - clubs.utdnebula.com
+        - dev.clubs.utdnebula.com
+        - a local development branch
+      validations:
+        required: true
   - type: textarea
     id: environment
     attributes:
       label: Environment
       description: |
-        Where did you encounter the bug? You can include OS, browser, branch (clubs.utdnebula.com,
-        dev.clubs.utdnebula.com, or a local development branch), or anything else to help us reproduce the bug
+        What was your environment when you encountered this bug? Include 
+        browser, or anything else to help us reproduce the bug
     validations:
       required: true
