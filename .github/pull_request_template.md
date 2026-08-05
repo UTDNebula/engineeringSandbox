@@ -28,8 +28,8 @@ I used AI to help write these functions/components
 ### Checklist
 <!-- 
 Check these off as you complete them by changing '[ ]' to '[x]'
-
 -->
+
 - [ ] I understand the changes in my PR
 - [ ] I have changed docs related to my PR or deemed it unnecessary
 - [ ] I have added the database migration label to this PR or deemed it unnecessary
