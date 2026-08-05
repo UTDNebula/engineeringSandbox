@@ -27,7 +27,8 @@ I used AI to help write these functions/components
 
 ### Checklist
 <!-- 
-Check these off as you complete them by changing '[ ]' to '[x]'
+Check these off as you complete them by changing '[ ]' to '[x]' or clicking 
+the checkboxes after making your PR
 -->
 
 - [ ] I understand the changes in my PR
