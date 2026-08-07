@@ -1,40 +1,27 @@
 <!--
-Thank you for taking the time to make this contribution!
-We don't expect perfection and appreciate anything you can do to help.
-Respond to each prompt below its comment
+  Thank you for taking the time to contribute!
+  We don't expect perfection and appreciate anything you can do to help.
+  Please fill out each section below
 -->
+
 ### Description
-<!--
-Describe the overall changes of this pull request below and why.
-Include related issue numbers or PRs if applicable (e.g., "Fixes #123").
--->
+<!-- Include related issues or PRs (e.g., "Resolves #123") -->
+
+
 
 ### Testing
-<!--
-What testing have you already done for this pull request?
-How can someone else test this?
--->
+<!-- How have you tested the changes in this PR? How can we test it? -->
+
+
 
 ### AI Disclosure
-<!--
-As per Nebula's AI Policy at https://nebula-labs.atlassian.net/wiki/x/AgCwQw,
-disclose any AI generated contributions and where they happened. We don't need
-you to be super specific. Just give us a general idea.
-e.g.
-I used AI to help write tests
-I used AI to help write these functions/components
--->
+<!-- In general, how did you use AI to help you? (see our AI policy at https://nebula-labs.atlassian.net/wiki/x/AgCwQw) -->
+
+
 
 ### Checklist
-<!-- 
-Check these off as you complete them by changing '[ ]' to '[x]' or clicking 
-the checkboxes after making your PR
--->
+<!-- Please check off that you've completed each item below -->
 
-- [ ] I understand the changes in my PR
-- [ ] I have changed docs related to my PR or deemed it unnecessary
-- [ ] I have added the database migration label to this PR or deemed it unnecessary
-- [ ] I have checked my PR in both light and dark mode or deemed it unnecessary
-- [ ] I have performed a self-review and test of my code
-- [ ] I have commented my code in hard-to-understand areas
-- [ ] I have ran `npm run lint` and `npm run format`
+- [x] Create this PR
+- [ ] Evaluate this PR against the [PR checklist](https://github.com/UTDNebula/engineeringSandbox/wiki/How-to-Contribute)
+- [ ] Perform final self-review
