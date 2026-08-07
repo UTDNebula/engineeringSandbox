@@ -1,40 +1,32 @@
 <!--
-Thank you for taking the time to make this contribution!
-We don't expect perfection and appreciate anything you can do to help.
-Respond to each prompt below its comment
+  Thank you for taking the time to contribute!
+  We don't expect perfection and appreciate anything you can do to help.
+  Please fill out each section below
 -->
+
 ### Description
-<!--
-Describe the overall changes of this pull request below and why.
-Include related issue numbers or PRs if applicable (e.g., "Fixes #123").
--->
+<!-- Include related issues or PRs (e.g., "Resolves #123") -->
+
+
 
 ### Testing
-<!--
-What testing have you already done for this pull request?
-How can someone else test this?
--->
+<!-- How have you checked that this PR works? How can we test it? -->
+
+
 
 ### AI Disclosure
-<!--
-As per Nebula's AI Policy at https://nebula-labs.atlassian.net/wiki/x/AgCwQw,
-disclose any AI generated contributions and where they happened. We don't need
-you to be super specific. Just give us a general idea.
-e.g.
-I used AI to help write tests
-I used AI to help write these functions/components
--->
+<!-- Just give us a general idea of how AI helped you (per our AI policy at https://nebula-labs.atlassian.net/wiki/x/AgCwQw) -->
+
+
 
 ### Checklist
-<!-- 
-Check these off as you complete them by changing '[ ]' to '[x]' or clicking 
-the checkboxes after making your PR
--->
+<!-- Please check off that you've completed each item below -->
 
-- [ ] I understand the changes in my PR
-- [ ] I have changed docs related to my PR or deemed it unnecessary
-- [ ] I have added the database migration label to this PR or deemed it unnecessary
-- [ ] I have checked my PR in both light and dark mode or deemed it unnecessary
-- [ ] I have performed a self-review and test of my code
-- [ ] I have commented my code in hard-to-understand areas
-- [ ] I have ran `npm run lint` and `npm run format`
+- [x] Create this PR
+- [ ] Run `npm run lint`, `npm run format`, and `npm run type:check`
+- [ ] I understand and have tested my changes, plus added code comments in complicated areas
+
+If applicable:
+- [ ] Updated documentation related to my PR
+- [ ] Tested and works in both light and dark mode
+- [ ] Added database migration tag
