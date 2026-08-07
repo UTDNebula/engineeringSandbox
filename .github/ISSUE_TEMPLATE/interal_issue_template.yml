@@ -1,4 +1,4 @@
-name: Internal Change
+name: 🔧  Internal Change
 description: Suggest an Internal Change, e.g., documentation, dependencies, a code refactor
 labels: ["Task"]
 body:
