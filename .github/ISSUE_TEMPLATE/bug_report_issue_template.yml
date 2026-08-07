@@ -4,36 +4,26 @@ labels: ["Bug"]
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report! By submitting 
-        this issue, you agree to follow our 
-        [Code of Conduct](https://nebula-labs.atlassian.net/wiki/x/vAA-DQ)
+      value: Thanks for taking the time to fill out this bug report! By submitting this issue, you agree to follow our [Code of Conduct](https://nebula-labs.atlassian.net/wiki/x/vAA-DQ)
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: |
-        Give a description of what the bug is
+      description: What is the bug?
     validations:
       required: true
   - type: textarea
     id: steps-to-reproduce
     attributes:
       label: Steps To Reproduce
-      description: |
-        Describe how to reproduce this bug. You can include include 
-        screenshots or logs if they would help! If putting logs, be sure to 
-        wrap with ```` ```bash ```` before your logs and ```` ``` ```` after
+      description: Help us reproduce this bug. If helpful, you can include screenshots or logs! Be sure to wrap logs with ```` ```bash ```` before and ```` ``` ```` after.
     validations:
       required: true
   - type: textarea
     id: additional-context
     attributes:
       label: Additional Context
-      description: |
-        Describe the bug in more detail. You can include related issues, 
-        helpful background knowledge, related documentation, or anything else 
-        that will help
+      description: Describe the bug in more detail. You can include related issues, helpful background knowledge, related documentation, or anything else that will help.
     validations:
       required: false
   - type: dropdown
@@ -51,8 +41,9 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: |
-        What was your environment when you encountered this bug? Include 
-        browser, or anything else to help us reproduce the bug
+      description: What browser and operating system were you using when you encountered this bug?
+      value: |
+        Browser: 
+        Operating system: 
     validations:
       required: true
