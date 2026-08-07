@@ -45,8 +45,8 @@ body:
         - clubs.utdnebula.com
         - dev.clubs.utdnebula.com
         - a local development branch
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: environment
     attributes:
