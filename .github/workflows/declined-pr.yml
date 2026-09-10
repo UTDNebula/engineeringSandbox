@@ -1,27 +1,11 @@
-name: Add comment
+name: Decline PR
 on:
   pull_request:
     types:
       - labeled
 jobs:
-  add-comment:
-    if: "github.event.label.name == 'status: declined'"
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      - name: Add comment
-        run: gh pr comment "$NUMBER" --body "$BODY"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.pull_request.number }}
-          BODY: |
-            (add-comment) Thank you for your contribution! However, we won't be merging this PR for at least one of these reasons:
-            - The issue this PR resolves is reserved for new recruits. You should instead find issues to work on using [these search filters](${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22Recommended%20for%20Recruits%22).
-            - This PR uses AI excessively. Please see Nebula Lab's [AI Policy](https://nebula-labs.atlassian.net/wiki/x/AgCwQw).
-            - We plan to approach this issue in another way.
   unlink-issue:
+    if: "github.event.label.name == 'status: declined'"
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -47,6 +31,7 @@ jobs:
               core.info("Couldn't find closing keywords to remove")
             }
   close-pr:
+    if: "github.event.label.name == 'status: declined'"
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -58,7 +43,10 @@ jobs:
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.pull_request.number }}
           COMMENT: |
-            Thank you for your contribution! However, we won't be merging this PR for at least one of these reasons:
-            - The issue this PR resolves is reserved for new recruits. You should instead find issues to work on using [these search filters](${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22Recommended%20for%20Recruits%22).
-            - This PR uses AI excessively. Please see Nebula Lab's [AI Policy](https://nebula-labs.atlassian.net/wiki/x/AgCwQw).
+            Thank you for your contribution! However, we've closed this PR for at least one of these reasons:
+
+            - The issue this PR resolves is reserved for new recruits in Nebula Labs. You should instead find issues to work on using [these search filters](${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22Recommended%20for%20Recruits%22).
+            - This PR uses AI in a way that breaks the [Nebula Labs AI Policy](https://nebula-labs.atlassian.net/wiki/x/AgCwQw).
             - We plan to approach this issue in another way.
+
+            Please let us know if you have any questions.
