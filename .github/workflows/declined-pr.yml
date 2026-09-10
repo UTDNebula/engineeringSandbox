@@ -15,7 +15,7 @@ jobs:
         with:
           script: |
             const prBody = context.payload.pull_request?.body ?? ''
-            const regex = /(close(s|d)?|fix(es|ed)?|resolve(s|d)?) ?(.+\/.+)?#\d+/gi
+            const regex = /(?<!(` *))(close(s|d)?|fix(es|ed)?|resolve(s|d)?) ?(.+\/.+)?#\d+(?!( *`))/gi
 
             if (regex.test(prBody)) {
               const newBody = prBody.replace(regex, `\`$&\``)
