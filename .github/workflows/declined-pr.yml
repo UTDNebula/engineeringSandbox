@@ -34,7 +34,7 @@ jobs:
             const regex = /(close(s|d)?|fix(es|ed)?|resolve(s|d)?) ?(.+\/.+)?#\d+/gi
 
             if (regex.test(prBody)) {
-              const newBody = prBody.replace(regex, '')
+              const newBody = prBody.replace(regex, `\`&$\``)
 
               await github.rest.pulls.update({
                 owner: context.repo.owner,
