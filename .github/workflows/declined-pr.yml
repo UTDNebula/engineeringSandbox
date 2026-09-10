@@ -17,7 +17,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.pull_request.number }}
           BODY: |
-            Thank you for your contribution! However, we won't be merging this PR for at least one of these reasons:
+            (add-comment) Thank you for your contribution! However, we won't be merging this PR for at least one of these reasons:
             - The issue this PR resolves is reserved for new recruits. You should instead find issues to work on using [these search filters](${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22Recommended%20for%20Recruits%22).
             - This PR uses AI excessively. Please see Nebula Lab's [AI Policy](https://nebula-labs.atlassian.net/wiki/x/AgCwQw).
             - We plan to approach this issue in another way.
@@ -46,3 +46,19 @@ jobs:
             } else {
               core.info("Couldn't find closing keywords to remove")
             }
+  close-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Close PR
+        run: gh pr close "$NUMBER" --comment "$COMMENT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          COMMENT: |
+            Thank you for your contribution! However, we won't be merging this PR for at least one of these reasons:
+            - The issue this PR resolves is reserved for new recruits. You should instead find issues to work on using [these search filters](${{ github.server_url }}/${{ github.repository }}/issues?q=is%3Aissue%20state%3Aopen%20-label%3A%22Recommended%20for%20Recruits%22).
+            - This PR uses AI excessively. Please see Nebula Lab's [AI Policy](https://nebula-labs.atlassian.net/wiki/x/AgCwQw).
+            - We plan to approach this issue in another way.
